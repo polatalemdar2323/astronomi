@@ -2,72 +2,73 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://www.evreninansiklopedisi.com/</loc>
+        <loc>https://www.evreninansiklopedisi.space/</loc>
         <lastmod>2025-11-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://www.evreninansiklopedisi.com/#teleskoplar</loc>
+        <loc>https://www.evreninansiklopedisi.space/#teleskoplar</loc>
         <lastmod>2025-11-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.evreninansiklopedisi.com/#gezegenler</loc>
+        <loc>https://www.evreninansiklopedisi.space/#gezegenler</loc>
         <lastmod>2025-11-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.evreninansiklopedisi.com/#yildizlar</loc>
+        <loc>https://www.evreninansiklopedisi.space/#yildizlar</loc>
         <lastmod>2025-11-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.evreninansiklopedisi.com/#galaksiler</loc>
+        <loc>https://www.evreninansiklopedisi.space/#galaksiler</loc>
         <lastmod>2025-11-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.evreninansiklopedisi.com/#karaDelikler</loc>
+        <loc>https://www.evreninansiklopedisi.space/#karaDelikler</loc>
         <lastmod>2025-11-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.evreninansiklopedisi.com/#sondalar</loc>
+        <loc>https://www.evreninansiklopedisi.space/#sondalar</loc>
         <lastmod>2025-11-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.evreninansiklopedisi.com/#iss</loc>
+        <loc>https://www.evreninansiklopedisi.space/#iss</loc>
         <lastmod>2025-11-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.evreninansiklopedisi.com/#exoplanet</loc>
+        <loc>https://www.evreninansiklopedisi.space/#exoplanet</loc>
         <lastmod>2025-11-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://www.evreninansiklopedisi.com/#hakkimizda</loc>
+        <loc>https://www.evreninansiklopedisi.space/#hakkimizda</loc>
         <lastmod>2025-11-15</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://www.evreninansiklopedisi.com/#iletisim</loc>
+        <loc>https://www.evreninansiklopedisi.space/#iletisim</loc>
         <lastmod>2025-11-15</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
+
 
 </urlset>

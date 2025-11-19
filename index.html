@@ -377,7 +377,7 @@
   }
   #feedback-fab:hover {
       transform: scale(1.08) rotate(-4deg);
-      background: var(--accent); /* Hover'da Sarı */
+      background: var(--accent); 
       color: var(--dark-bg);
       border-color: var(--accent);
       box-shadow: 0 10px 20px rgba(255, 210, 77, 0.8);
@@ -498,7 +498,7 @@
   }
   footer strong{ color: var(--footer-gray); font-weight:800; }
 
-  /* fade-in helper */
+  
   .fade-in{ opacity:0; transform: translateY(6px); animation:fadeUp 700ms ease forwards; }
   @keyframes fadeUp{ to{ opacity:1; transform:none } }
 
@@ -770,7 +770,7 @@
 
 <script>
 (function(){
-  // --- YENİ BAŞLIK HARİTASI (DEĞİŞİKLİK 1) ---
+  
   const BASE_TITLE = "Evrenin Ansiklopedisi";
   const TITLE_MAP = {
       'home': BASE_TITLE,
@@ -785,7 +785,7 @@
       'iletisim': `İletişim | ${BASE_TITLE}`,
       'hakkimizda': `Hakkımda | ${BASE_TITLE}`,
   };
-  // ---------------------------------------------
+  
   
   const sections = Array.from(document.querySelectorAll('.section'));
   const body = document.body;
@@ -819,15 +819,15 @@
     const target = document.getElementById(id);
     const isHome = (id === 'home');
     
-    // --- YENİ BAŞLIK VE URL DEĞİŞİKLİĞİ (DEĞİŞİKLİK 2) ---
+    
     document.title = TITLE_MAP[id] || BASE_TITLE;
     
     if(isHome) {
-        history.pushState(null, '', window.location.pathname); // Ana sayfada URL'yi temizle
+        history.pushState(null, '', window.location.pathname); 
     } else {
-        history.pushState(null, '', `#${id}`); // Kategori için #ID ekle
+        history.pushState(null, '', `#${id}`); 
     }
-    // --------------------------------------------------------
+  
 
     if (homeContent) {
         if (isHome) {
@@ -965,9 +965,9 @@
   });
 
 
-  // init
+  
   document.addEventListener('DOMContentLoaded', ()=>{
-    // --- YENİ URL ÇAPA KONTROLÜ (DEĞİŞİKLİK 3) ---
+  
     const initialHash = window.location.hash.substring(1);
     
     let initialSection = 'home';
@@ -985,7 +985,7 @@
     }
   });
 
-  // Tarayıcı geri/ileri butonlarına basıldığında başlığı ve içeriği güncelle
+  
   window.addEventListener('popstate', () => {
       const hash = window.location.hash.substring(1);
       const targetId = hash && document.getElementById(hash) ? hash : 'home';

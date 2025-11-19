@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="tr">
 <head>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
@@ -671,7 +671,7 @@
         <p>Birçok uzay görevi, daha düşük maliyet ve risk faktörleri nedeniyle mürettebatlı operasyonlardan ziyade telerobotik operasyonlara daha uygundur. Ayrıca, Venüs gibi bazı gezegen hedefleri veya Jüpiter'in yakın çevresi, mevcut teknoloji göz önüne alındığında insan yaşamının sürdürülebilirliği için fazla elverişsizdir. Bu yüzden böyle zor ve mürettebatsız uzay görevlerinde, uzay sondası kullanılır.</p>
 
         <h3>Voyager 1'i Tanıyalım</h3>
-        <p>Voyager 1, Voyager programı kapsamında NASA tarafından dış Güneş Sistemi'ni ve Güneş'in heliosferinin ötesindeki yıldızlararası uzayı araştırmak için 5 Eylül 1977'de fırlatılan uzay sondasıdır. İkizi Voyager 2'den 16 gün sonra fırlatılan 722 kilogram ağırlığındaki Voyager 1, NASA tarafından fırlatıldığı 5 Eylül 1977'den bu yana hizmet vermek, düzenli komutları almak ve Dünya'ya veri iletmek için Derin Uzay Ağı ile iletişim kurmaya devam etmektedir. Jüpiter ve Satürn'ü ziyaret etmiş, bu gezegenlere ait uyduların detaylı fotoğraflarını elde eden ilk sonda olmuştur. Görevi hâlâ devam etmektedir. Voyager 1, 08.11.2025 tarihi itibariyle Dünya'dan 25,358 milyar km (15,762 milyar mil) uzaktadır ve 61,162 km/h (38,026 mp/h) hızla uzaklaşmaya devam etmektedir. Bu mesafeden Voyager 1'e sinyal gönderilip, geri alınması yaklaşık 46 saat sürmektedir. Ayrıca Voyager 1, şu anda Dünya'dan en uzaktaki insan yapımı nesnedir. Voyager 1, 25 Ağustos 2012 tarihinde Güneş Sistemi'ni aşarak yıldızlar arası uzaya ulaşmıştır.</p>
+        <p>Voyager 1, Voyager programı kapsamında NASA tarafından dış Güneş Sistemi'ni ve Güneş'in heliosferinin ötesindeki yıldızlararası uzayı araştırmak için 5 Eylül 1977'de fırlatılan uzay sondasıdır. İkizi Voyager 2'den 16 gün sonra fırlatılan 722 kilogram ağırlığındaki Voyager 1, NASA tarafından fırlatıldığı 5 Eylül 1977'den bu yana hizmet vermek, düzenli komutları almak ve Dünya'ya veri iletmek için Derin Uzay Ağı ile iletişim kurmaya devam etmektedir. Jüpiter ve Satürn'ü ziyaret etmiş, bu gezegenlere ait uyduların detaylı fotoğraflarını elde eden ilk sonda olmuştur. Görevi hâlâ devam etmektedir. Voyager 1, 08.11.2025 tarihi itibariyle Dünya'dan 25,358 milyar km (15,762 milyar mil) uzaktadır ve 61,162 km/h (38,026 mp/h) hızla uzaklaşmaya devam etmektedir. Bu mesafeden Voyager 1'e sinyal gönderilip, geri alınması yaklaşık 46 saat sürmektedir. Ayrıca Voyager 1, şu anda Dünya'dan en uzaktaki insan yapımı nesnedir. Voyager 1, 25 Ağustos 2012 tarihinde Güneş Sistemi'ni aşarak yıldızlararası uzaya ulaşmıştır.</p>
     </article>
 
    
@@ -737,7 +737,7 @@
       <button class="back-to-home-btn" data-target="home"><i class="fas fa-arrow-left"></i> Ana Sayfaya Dön</button>
       <h2 id="iletTitle">İletişim</h2>
       
-      <p>Bu site, astronomiye olan tutkuyla yürütülen bir hobi projesidir. Projeyi geliştirmem ve içeriği daha iyi hale getirmem için sizin geri bildirimleriniz çok büyük bir öneme sahiptir.</p>
+      <p>Bu site, astronomiye olan tutkuyla yürütülen bir hobi projesidir. Projeyi geliştirmemiz ve içeriği daha iyi hale getirmemiz için sizin geri bildirimleriniz çok büyük bir öneme sahiptir.</p>
       
       <h3>Benimle Nasıl İletişim Kurabilirsiniz?</h3>
       <ul>
@@ -756,7 +756,7 @@
 
       <div class="about-content">
           
-          <h3>Misyonum</h3>
+          <h3>Misyonumuz</h3>
           <p>Amacım, her insanın astronomi hakkında bilgi sahibi olmasını sağlamaktır. Bu doğrultuda Evrenin Ansiklopedisi sürekli gelişmeye devam edecektir.</p>
 
       </div>
@@ -770,6 +770,23 @@
 
 <script>
 (function(){
+  // --- YENİ BAŞLIK HARİTASI (DEĞİŞİKLİK 1) ---
+  const BASE_TITLE = "Evrenin Ansiklopedisi";
+  const TITLE_MAP = {
+      'home': BASE_TITLE,
+      'teleskoplar': `Teleskoplar | ${BASE_TITLE}`,
+      'gezegenler': `Gezegenler | ${BASE_TITLE}`,
+      'yildizlar': `Yıldızlar | ${BASE_TITLE}`,
+      'galaksiler': `Galaksiler | ${BASE_TITLE}`,
+      'karadelikler': `Kara Delikler | ${BASE_TITLE}`,
+      'sondalar': `Uzay Sondaları | ${BASE_TITLE}`,
+      'iss': `Uluslararası Uzay İstasyonu | ${BASE_TITLE}`,
+      'exoplanet': `Ötegezegenler | ${BASE_TITLE}`,
+      'iletisim': `İletişim | ${BASE_TITLE}`,
+      'hakkimizda': `Hakkımda | ${BASE_TITLE}`,
+  };
+  // ---------------------------------------------
+  
   const sections = Array.from(document.querySelectorAll('.section'));
   const body = document.body;
 
@@ -802,6 +819,16 @@
     const target = document.getElementById(id);
     const isHome = (id === 'home');
     
+    // --- YENİ BAŞLIK VE URL DEĞİŞİKLİĞİ (DEĞİŞİKLİK 2) ---
+    document.title = TITLE_MAP[id] || BASE_TITLE;
+    
+    if(isHome) {
+        history.pushState(null, '', window.location.pathname); // Ana sayfada URL'yi temizle
+    } else {
+        history.pushState(null, '', `#${id}`); // Kategori için #ID ekle
+    }
+    // --------------------------------------------------------
+
     if (homeContent) {
         if (isHome) {
             homeContent.classList.add('show');
@@ -849,8 +876,6 @@
     body.style.backgroundImage = `url('${bg}')`;
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    
-    history.pushState(null, '', id === 'home' ? window.location.pathname : `#${id}`);
     
     closeSidebar();
   }
@@ -942,8 +967,14 @@
 
   // init
   document.addEventListener('DOMContentLoaded', ()=>{
+    // --- YENİ URL ÇAPA KONTROLÜ (DEĞİŞİKLİK 3) ---
     const initialHash = window.location.hash.substring(1);
-    const initialSection = initialHash && (document.getElementById(initialHash) || initialHash === 'home') ? initialHash : 'home';
+    
+    let initialSection = 'home';
+    if (initialHash && document.getElementById(initialHash)) {
+        initialSection = initialHash;
+    }
+    // ----------------------------------------------
       
     showSection(initialSection);
     
@@ -953,11 +984,14 @@
         feedbackFab.classList.add('show');
     }
   });
+
+  // Tarayıcı geri/ileri butonlarına basıldığında başlığı ve içeriği güncelle
+  window.addEventListener('popstate', () => {
+      const hash = window.location.hash.substring(1);
+      const targetId = hash && document.getElementById(hash) ? hash : 'home';
+      showSection(targetId);
+  });
 })();
 </script>
 </body>
-
 </html>
-
-
-

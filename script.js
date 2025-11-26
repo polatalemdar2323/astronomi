@@ -25,7 +25,6 @@
         
         // Yumuşak kaydırma ile keşif listesine in
         setTimeout(() => {
-             // discoveryList yoksa hata vermemesi için kontrol
              if(discoveryList) {
                  window.scrollTo({ top: discoveryList.offsetTop - 80, behavior: 'smooth' });
              }
@@ -68,7 +67,7 @@
 
   // 3. GERİ BİLDİRİM MODALI Fonksiyonları
   if (feedbackFab && feedbackModal && closeModalBtn) {
-      feedbackFab.classList.add('show'); // Ana sayfada sabit göster
+      feedbackFab.classList.add('show'); 
       
       feedbackFab.addEventListener('click', () => {
           feedbackModal.style.display = 'block';

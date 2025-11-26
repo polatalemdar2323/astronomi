@@ -1,6 +1,5 @@
 (function(){
   
-  // SADECE GEREKLİ DOM elementlerini al
   const heroSection = document.getElementById('heroSection');
   const startDiscoveryBtn = document.getElementById('startDiscoveryBtn');
   const discoveryList = document.getElementById('discoveryList');
@@ -14,16 +13,12 @@
   const feedbackModal = document.getElementById('feedbackModal');
   const closeModalBtn = document.getElementById('closeModal');
   
-  // 1. KEŞFETMEYE BAŞLA Butonu ve Animasyonu
   if(startDiscoveryBtn && heroSection && discoveryList){
     startDiscoveryBtn.addEventListener('click', (e)=>{
         e.preventDefault();
-        // Ana sayfadaki kahraman (hero) bölümünü gizle
         heroSection.classList.add('hidden');
-        // Keşif listesi bölümünü göster
         discoveryList.classList.add('show');
         
-        // Yumuşak kaydırma ile keşif listesine in
         setTimeout(() => {
              if(discoveryList) {
                  window.scrollTo({ top: discoveryList.offsetTop - 80, behavior: 'smooth' });
@@ -31,8 +26,7 @@
         }, 100); 
     });
   }
-  
-  // 2. SIDEBAR (MENÜ) Fonksiyonları
+
   function openSidebar() {
       sidebar.classList.add('open');
       body.classList.add('sidebar-open');
@@ -49,8 +43,7 @@
   if (closeSidebarBtn) {
       closeSidebarBtn.addEventListener('click', closeSidebar);
   }
-  
-  // Sidebar dışına tıklama ile kapatma
+
   if (sidebar) {
       window.addEventListener('click', (event) => {
           if (event.target === sidebar) {
@@ -59,13 +52,11 @@
       });
   }
 
-  // Sidebar içindeki linklere tıklandığında menüyü kapat
   sidebar.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', closeSidebar);
   });
 
 
-  // 3. GERİ BİLDİRİM MODALI Fonksiyonları
   if (feedbackFab && feedbackModal && closeModalBtn) {
       feedbackFab.classList.add('show'); 
       
@@ -77,7 +68,6 @@
           feedbackModal.style.display = 'none';
       });
 
-      // Modal dışına tıklama ile kapatma
       window.addEventListener('click', (event) => {
           if (event.target === feedbackModal) {
               feedbackModal.style.display = 'none';
@@ -85,7 +75,6 @@
       });
   }
   
-  // Sayfa yüklendiğinde varsayılan olarak Keşif listesini gizle
   document.addEventListener('DOMContentLoaded', ()=>{
       if(discoveryList) {
           discoveryList.classList.remove('show');
@@ -93,3 +82,4 @@
   });
 
 })();
+

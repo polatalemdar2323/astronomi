@@ -1,51 +1,47 @@
 (function(){
   
-  // DOM elementlerini al
+  // SADECE GEREKLİ DOM elementlerini al
+  const heroSection = document.getElementById('heroSection');
   const startDiscoveryBtn = document.getElementById('startDiscoveryBtn');
   const discoveryList = document.getElementById('discoveryList');
-  const heroSection = document.getElementById('heroSection');
   
   const menuToggle = document.getElementById('menu-toggle');
   const sidebar = document.getElementById('sidebar');
   const closeSidebarBtn = document.getElementById('closeSidebar');
+  const body = document.body;
   
   const feedbackFab = document.getElementById('feedback-fab');
   const feedbackModal = document.getElementById('feedbackModal');
   const closeModalBtn = document.getElementById('closeModal');
   
-  // Sadece ana sayfada olan elementler için kontrol eklendi.
-  if (discoveryList && heroSection) {
-
-    // 1. KEŞFETMEYE BAŞLA Butonu ve Animasyonu
-    if(startDiscoveryBtn){
-      startDiscoveryBtn.addEventListener('click', ()=>{
-          // Ana sayfadaki kahraman (hero) bölümünü gizle
-          heroSection.classList.add('hidden');
-          // Keşif listesi bölümünü göster
-          discoveryList.classList.add('show');
-          
-          // Yumuşak kaydırma ile keşif listesine in
-          setTimeout(() => {
-               window.scrollTo({ top: discoveryList.offsetTop - 80, behavior: 'smooth' });
-          }, 100); 
-      });
-    }
-
-    // Geri butonu artık ana sayfaya "/" linki veriyor, JS ile gizleyip göstermeye gerek yok.
-    // Ancak bu butonu sadece discoveryList göründüğünde göstermek istiyorsanız CSS'te bu class'ı kullanabilirsiniz.
+  // 1. KEŞFETMEYE BAŞLA Butonu ve Animasyonu
+  if(startDiscoveryBtn && heroSection && discoveryList){
+    startDiscoveryBtn.addEventListener('click', (e)=>{
+        e.preventDefault();
+        // Ana sayfadaki kahraman (hero) bölümünü gizle
+        heroSection.classList.add('hidden');
+        // Keşif listesi bölümünü göster
+        discoveryList.classList.add('show');
+        
+        // Yumuşak kaydırma ile keşif listesine in
+        setTimeout(() => {
+             // discoveryList yoksa hata vermemesi için kontrol
+             if(discoveryList) {
+                 window.scrollTo({ top: discoveryList.offsetTop - 80, behavior: 'smooth' });
+             }
+        }, 100); 
+    });
   }
   
-  
   // 2. SIDEBAR (MENÜ) Fonksiyonları
-  
   function openSidebar() {
       sidebar.classList.add('open');
-      document.body.classList.add('sidebar-open'); // CSS için body'ye sınıf ekle
+      body.classList.add('sidebar-open');
   }
 
   function closeSidebar() {
       sidebar.classList.remove('open');
-      document.body.classList.remove('sidebar-open');
+      body.classList.remove('sidebar-open');
   }
 
   if (menuToggle) {
@@ -66,16 +62,14 @@
 
   // Sidebar içindeki linklere tıklandığında menüyü kapat
   sidebar.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-          // Link navigasyonunu tarayıcıya bırak, sadece menüyü kapat
-          closeSidebar();
-      });
+      link.addEventListener('click', closeSidebar);
   });
 
 
   // 3. GERİ BİLDİRİM MODALI Fonksiyonları
-
   if (feedbackFab && feedbackModal && closeModalBtn) {
+      feedbackFab.classList.add('show'); // Ana sayfada sabit göster
+      
       feedbackFab.addEventListener('click', () => {
           feedbackModal.style.display = 'block';
       });
@@ -91,9 +85,12 @@
           }
       });
   }
+  
+  // Sayfa yüklendiğinde varsayılan olarak Keşif listesini gizle
+  document.addEventListener('DOMContentLoaded', ()=>{
+      if(discoveryList) {
+          discoveryList.classList.remove('show');
+      }
+  });
 
-  
-  // Artık eski kodunuzdaki showSection veya hash (adres çubuğundaki #) kontrolüne
-  // gerek yoktur, çünkü tarayıcı direkt olarak linkleri takip edecektir.
-  
 })();

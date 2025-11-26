@@ -1,3 +1,5 @@
+/* Bu kod orijinal HTML dosyanızdaki tüm <style> etiketinin dışa aktarılmış ve gereksiz kısımlardan arındırılmış halidir. */
+
 :root{
   --accent:#ffd24d; 
   --muted:#a9c0d1; 
@@ -15,7 +17,8 @@ body{
   font-family:'Inter', system-ui, Segoe UI, Roboto, Arial;
   background:var(--dark-bg);
   color:#fff;
-  background-image: url('arkaplan.jpg');
+  /* Arka plan sadece bu dosya için değil, her HTML dosyasında tanımlanmalıdır */
+  background-image: url('arkaplan.jpg'); 
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -89,18 +92,26 @@ body.sidebar-open {
     font-size: 36px;
     margin-left: 50px;
 }
-#sidebar h3 {
+#sidebar h3 { /* Bu kural artık kullanılmayabilir ama tutarlılık için bıraktım */
     color: var(--accent);
     padding: 0 15px 0 32px;
     margin-bottom: 5px;
     font-size: 20px;
 }
-
-.topnav{
-  position:fixed; left:0; right:0; top:0;
-  display:none; 
-  z-index:999; 
+#sidebar hr {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 10px 32px;
 }
+#sidebar ul { /* Orijinal HTML'de yoktu, ama sidebar linklerini daha iyi organize etmek için gerekebilir */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#sidebar li {
+    padding: 0;
+}
+
 
 .back-to-home-btn{
     background: rgba(255, 255, 255, 0.1);
@@ -116,6 +127,7 @@ body.sidebar-open {
     align-items: center;
     gap: 8px;
     transition: all 200ms ease;
+    text-decoration: none; /* Link olarak da kullanılabilir */
 }
 .back-to-home-btn:hover{
     background: var(--accent);
@@ -147,13 +159,14 @@ body.sidebar-open {
 .wrap{ max-width:1100px; margin:40px auto; padding:18px; width:100%; flex:1; }
 
 #home-content {
-    display: none;
-    opacity: 0;
-    transform: translateY(12px);
-    transition: opacity 500ms ease, transform 500ms ease;
+    /* Eski JS'e gerek kalmayacak, varsayılan olarak gösterilecek */
+    display: block; 
+    opacity: 1;
+    transform: none;
+    transition: none;
     text-align: center;
 }
-#home-content.show {
+#home-content.show { /* Bu kural artık JS'te kullanılmayacak ama eski kodu bozmaması için tutuldu */
     display: block;
     opacity: 1;
     transform: none;
@@ -185,7 +198,7 @@ body.sidebar-open {
 }
 .hero h1{
   margin:0;
-  font-size:72px; 
+  font-size:72px; /* Orijinal HTML'de H1 yoktu, H1'i logodan kaldırdık */
   color: var(--accent);
   letter-spacing:1px;
   text-shadow: 0 10px 30px rgba(0,0,0,0.8);
@@ -199,7 +212,7 @@ body.sidebar-open {
 }
 
 #discoveryList{
-  display: none;
+  display: none; /* Başlangıçta gizli */
   opacity: 0;
   transform: translateY(12px);
   transition: opacity 500ms ease, transform 500ms ease;
@@ -218,6 +231,7 @@ body.sidebar-open {
   max-width: 900px;
   margin: 40px auto;
 }
+/* Discovery Card kuralları, artık link yerine menü kullanılacağı için kaldırıldı, ama stil bozulmasın diye tutuyorum */
 .discovery-card {
   background: rgba(255, 255, 255, 0.08);
   border-radius: 16px;
@@ -248,11 +262,12 @@ body.sidebar-open {
 }
 
 
+/* SECTİON VE İÇERİK kuralları (SADECE KATEGORİ HTML DOSYALARI İÇİN GEÇERLİ OLACAK) */
 .section{
-  display:none;
-  opacity:0;
-  transform: translateY(12px);
-  transition: opacity var(--transition), transform var(--transition);
+  /* Bu kurallar artık sadece /teleskoplar/index.html gibi dosyalarda kullanılacak */
+  display:block; 
+  opacity:1; 
+  transform:none;
   margin:28px 0;
   padding:24px; 
   background: rgba(0, 0, 0, 0.4);
@@ -260,7 +275,9 @@ body.sidebar-open {
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
-.section.show{ display:block; opacity:1; transform:none; }
+.section.show{ display:block; opacity:1; transform:none; } /* JS'ten kaldırıldı */
+/* Diğer .section kuralları (h2, p, img, card-grid) aynen kalmalı ve her kategori dosyasında kullanılmalı */
+/* ... (diğer section ve card-grid kuralları) ... */
 .section h2{ 
   color: var(--accent); 
   font-size:40px; 
@@ -303,7 +320,6 @@ body.sidebar-open {
   margin:20px 0; 
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
-
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -316,7 +332,6 @@ body.sidebar-open {
   padding: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 200ms ease;
-  cursor: pointer;
 }
 .card:hover {
   background: rgba(255, 255, 255, 0.1);
@@ -334,6 +349,8 @@ body.sidebar-open {
   font-size: 14px;
   margin-bottom: 0;
 }
+/* SON SECTION VE İÇERİK kuralları */
+
 
 #feedback-fab {
     position: fixed;
@@ -457,8 +474,6 @@ body.sidebar-open {
   }
   body.sidebar-open {
       margin-left: 0; 
-  }
-  #menu-toggle {
   }
 }
 

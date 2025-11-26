@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJc5f8tJjLq5B4PjG1v2X9yA5h08S+N91k8Z3fR3a+Vb8R1z+d/G+I+oP5e7w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 
@@ -25,16 +25,8 @@
   <nav id="sidebar">
       <a href="javascript:void(0)" class="closebtn" id="closeSidebar">&times;</a>
       
-      <a href="/teleskoplar/">Teleskoplar</a>
-      <a href="/gezegenler/">Gezegenler</a>
-      <a href="/yildizlar/">Yıldızlar</a>
-      <a href="/galaksiler/">Galaksiler</a>
-      <a href="/karadelikler/">Kara Delikler</a>
-      <a href="/sondalar/">Uzay Sondaları</a>
-      <a href="/iss/">Uluslararası Uzay İstasyonu</a>
-      <a href="/exoplanet/">Ötegezegenler</a>
+      <h3 style="margin-top: 20px;">Bilgi</h3>
       
-      <hr>
       <a href="/hakkimizda/">Hakkımda</a>
       <a href="/iletisim/">İletişim</a>
   </nav>
@@ -51,12 +43,21 @@
         <div id="discoveryList">
             <a href="/" class="back-to-home-btn"><i class="fas fa-arrow-left"></i> Ana Sayfaya Dön</a>
             <h2 style="font-size: 32px; color: white;">Keşfetmek İstediğiniz Kategoriyi Seçin</h2>
-            <div class="discovery-card-grid" id="discoveryCardGrid">
-                </div>
-            <p style="text-align:center; color: var(--muted); margin-top: 20px;">Menüdeki kategorileri kullanarak bilgiye ulaşabilirsiniz.</p>
+            
+            <div class="discovery-card-grid">
+                <a href="/teleskoplar/" class="discovery-card fade-in" style="animation-delay: 500ms;"><span>Teleskoplar</span></a>
+                <a href="/gezegenler/" class="discovery-card fade-in" style="animation-delay: 600ms;"><span>Gezegenler</span></a>
+                <a href="/yildizlar/" class="discovery-card fade-in" style="animation-delay: 700ms;"><span>Yıldızlar</span></a>
+                <a href="/galaksiler/" class="discovery-card fade-in" style="animation-delay: 800ms;"><span>Galaksiler</span></a>
+                <a href="/karadelikler/" class="discovery-card fade-in" style="animation-delay: 900ms;"><span>Kara Delikler</span></a>
+                <a href="/sondalar/" class="discovery-card fade-in" style="animation-delay: 1000ms;"><span>Uzay Sondaları</span></a>
+                <a href="/iss/" class="discovery-card fade-in" style="animation-delay: 1100ms;"><span>ISS</span></a>
+                <a href="/exoplanet/" class="discovery-card fade-in" style="animation-delay: 1200ms;"><span>Ötegezegenler</span></a>
+            </div>
+            
         </div>
     </div>
-  
+    
     </main>
 
   <button id="feedback-fab" aria-label="Geri Bildirim Gönder">
@@ -73,7 +74,6 @@
           <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf9ICDll2-xu_4mgcYEsZHK_EFL4dMDvHGyZR5VGI9SS1YUkg/viewform?embedded=true" width="285" height="300" frameborder="0" marginheight="0" marginwidth="0">Yükleniyor…</iframe>
           </div>
   </div>
-
 
   
   <footer role="contentinfo">

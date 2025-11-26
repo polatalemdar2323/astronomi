@@ -2,72 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://www.astronomi.space/</loc>
-        <lastmod>2025-11-26</lastmod> <changefreq>daily</changefreq>
+        <loc>https://astronomi.space/</loc>
+        <lastmod>2025-11-26</lastmod> 
+        <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://www.astronomi.space/teleskoplar/</loc>
+        <loc>https://astronomi.space/teleskoplar/</loc>
         <lastmod>2025-11-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.astronomi.space/gezegenler/</loc>
+        <loc>https://astronomi.space/gezegenler/</loc>
         <lastmod>2025-11-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.astronomi.space/yildizlar/</loc>
+        <loc>https://astronomi.space/yildizlar/</loc>
         <lastmod>2025-11-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.astronomi.space/galaksiler/</loc>
+        <loc>https://astronomi.space/galaksiler/</loc>
         <lastmod>2025-11-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.astronomi.space/karadelikler/</loc>
+        <loc>https://astronomi.space/karadelikler/</loc>
         <lastmod>2025-11-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.astronomi.space/sondalar/</loc>
+        <loc>https://astronomi.space/sondalar/</loc>
         <lastmod>2025-11-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.astronomi.space/iss/</loc>
+        <loc>https://astronomi.space/iss/</loc>
         <lastmod>2025-11-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.astronomi.space/exoplanet/</loc>
+        <loc>https://astronomi.space/exoplanet/</loc>
         <lastmod>2025-11-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://www.astronomi.space/hakkimizda/</loc>
+        <loc>https://astronomi.space/hakkimizda/</loc>
         <lastmod>2025-11-26</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://www.astronomi.space/iletisim/</loc>
+        <loc>https://astronomi.space/iletisim/</loc>
         <lastmod>2025-11-26</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
-
 
 </urlset>

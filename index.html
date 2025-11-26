@@ -9,78 +9,77 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Evrenin Ansiklopedisi</title>
-<meta name="description" content="Evrenin Ansiklopedisi, astronomi ve uzay bilimleri hakkında geniş ve akıcı bilgiler sunan hobi projesidir.">
+<meta name="description" content="Evrenin Ansiklopedisi — teleskoplardan kara deliklere, gezegenlerden yıldızlara, ISS'den sondalara kadar kapsamlı bilgiler.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJc5f8tJjLq5B4PjG1v2X9yA5h08S+N91k8Z3fR3a+Vb8R1z+d/G+I+oP5e7w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-image: url('arkaplan.jpg'); background-position: center top; background-size: cover; background-attachment: fixed;">
+<body>
 
-  <button id="menu-toggle" aria-label="Menüyü Aç" style="display: flex; width: 40px; height: 40px; justify-content: center; align-items: center; background-color: var(--primary); border-radius: 50%; color: white; position: fixed; top: 20px; left: 20px; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+  <button id="menu-toggle" aria-label="Menüyü Aç">
       <i class="fas fa-bars"></i>
   </button>
-  <h1 id="site-logo" style="display: block;">
-      <img src="logo.jpg" alt="Evrenin Ansiklopedisi Logo">
-  </h1>
   
-  <nav id="sidebar" role="navigation">
-      <button id="closeSidebar" aria-label="Menüyü Kapat"><i class="fas fa-times"></i></button>
-      <h2>Kategoriler</h2>
-      <ul>
-          <li><a href="/teleskoplar/" data-target="teleskoplar"><i class="fas fa-satellite-dish"></i> Teleskoplar</a></li>
-          <li><a href="/gezegenler/" data-target="gezegenler"><i class="fas fa-globe-asia"></i> Gezegenler</a></li>
-          <li><a href="/yildizlar/" data-target="yildizlar"><i class="fas fa-star"></i> Yıldızlar</a></li>
-          <li><a href="/galaksiler/" data-target="galaksiler"><i class="fas fa-dharmachakra"></i> Galaksiler</a></li>
-          <li><a href="/karadelikler/" data-target="karadelikler"><i class="fas fa-compact-disc"></i> Kara Delikler</a></li>
-          <li><a href="/sondalar/" data-target="sondalar"><i class="fas fa-rocket"></i> Uzay Sondaları</a></li>
-          <li><a href="/iss/" data-target="iss"><i class="fas fa-space-station-moon"></i> ISS</a></li>
-          <li><a href="/exoplanet/" data-target="exoplanet"><i class="fas fa-rings-sydney"></i> Ötegezegenler</a></li>
-      </ul>
+  <nav id="sidebar">
+      <a href="javascript:void(0)" class="closebtn" id="closeSidebar">&times;</a>
+      
+      <a href="/teleskoplar/">Teleskoplar</a>
+      <a href="/gezegenler/">Gezegenler</a>
+      <a href="/yildizlar/">Yıldızlar</a>
+      <a href="/galaksiler/">Galaksiler</a>
+      <a href="/karadelikler/">Kara Delikler</a>
+      <a href="/sondalar/">Uzay Sondaları</a>
+      <a href="/iss/">Uluslararası Uzay İstasyonu</a>
+      <a href="/exoplanet/">Ötegezegenler</a>
+      
       <hr>
-      <h2>Bilgi</h2>
-      <ul>
-          <li><a href="/hakkimizda/" data-target="hakkimizda"><i class="fas fa-user-astronaut"></i> Hakkımda</a></li>
-          <li><a href="/iletisim/" data-target="iletisim"><i class="fas fa-envelope"></i> İletişim</a></li>
-      </ul>
+      <a href="/hakkimizda/">Hakkımda</a>
+      <a href="/iletisim/">İletişim</a>
   </nav>
-
+  
   <main class="wrap" id="wrap" role="main">
 
-      <section id="home-content" class="show fade-in">
+    <div id="home-content" data-bg="arkaplan.jpg" class="show"> 
+        <div class="hero" id="heroSection" role="banner">
+            <img src="logo.jpg" alt="Evrenin Ansiklopedisi Logo" id="site-logo" style="max-width: 300px; margin: 0 auto 20px; display: block;"> 
+            <p class="subtitle fade-in" style="animation-delay: 100ms;">Teleskoplardan kara deliklere, gezegenlerden yıldızlara, ISS'den sondalara: Bilmeniz gereken her şey burada.</p>
+            <button id="startDiscoveryBtn" class="action-button fade-in" style="animation-delay: 200ms;">Keşfetmeye Başla</button>
+        </div>
+
+        <div id="discoveryList">
+            <a href="/" class="back-to-home-btn"><i class="fas fa-arrow-left"></i> Ana Sayfaya Dön</a>
+            <h2 style="font-size: 32px; color: white;">Keşfetmek İstediğiniz Kategoriyi Seçin</h2>
+            <div class="discovery-card-grid" id="discoveryCardGrid">
+                </div>
+            <p style="text-align:center; color: var(--muted); margin-top: 20px;">Menüdeki kategorileri kullanarak bilgiye ulaşabilirsiniz.</p>
+        </div>
+    </div>
+  
+    </main>
+
+  <button id="feedback-fab" aria-label="Geri Bildirim Gönder">
+      <i class="fas fa-comment-dots"></i>
+  </button>
+
+  <div id="feedbackModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-content">
+          <span class="modal-close" id="closeModal">&times;</span>
+          <h3 id="modalTitle">Geri Bildiriminiz Bizim İçin Önemli!</h3>
           
-          <div id="heroSection">
-              <p class="subtitle fade-in">Evrenin sırlarını keşfetmeye hazır mısınız?</p>
-              <h2 class="fade-in">Evrenin Ansiklopedisi'ne Hoş Geldiniz</h2>
-              <button id="startDiscoveryBtn" class="fade-in">Keşfetmeye Başla <i class="fas fa-arrow-down"></i></button>
+          <p style="text-align:center; color: var(--muted); margin-bottom: 20px;">Lütfen görüş ve önerilerinizi aşağıdaki formu kullanarak bize iletin.</p>
+
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf9ICDll2-xu_4mgcYEsZHK_EFL4dMDvHGyZR5VGI9SS1YUkg/viewform?embedded=true" width="285" height="300" frameborder="0" marginheight="0" marginwidth="0">Yükleniyor…</iframe>
           </div>
+  </div>
 
-          <div id="discoveryList">
-              <h3>Keşif Alanları</h3>
-              <p>Lütfen sol üstteki menü ikonunu kullanarak konular arasında gezinin.</p>
-          </div>
 
-      </section>
-
-      </main>
-
+  
   <footer role="contentinfo">
     <strong>© Evrenin Ansiklopedisi</strong> — <span style="color:var(--footer-gray)">Tüm hakları saklıdır.</span>
   </footer>
-  
-  <div id="feedbackModal" class="modal">
-      <div class="modal-content">
-          <span class="close" id="closeModal">&times;</span>
-          <h3>Geri Bildirim</h3>
-          <p>Düşüncelerinizi paylaşın. Site hakkında ne düşündüğünüzü merak ediyoruz.</p>
-          <a href="/iletisim/" class="btn-primary" style="display:block; text-align:center; margin-top: 15px;">İletişim Sayfasına Git</a>
-      </div>
-  </div>
 
-  <button id="feedback-fab" aria-label="Geri Bildirim" class="show"><i class="fas fa-comment-alt"></i></button>
-
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
